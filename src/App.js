@@ -57,8 +57,8 @@ function App() {
                     // 이벤트 버블링 막기
                     e.stopPropagation();
                     // 무언가를 추가할때 스프레드 오퍼시티를 이용해서 추가하도록하자
-                    // 배열은 reference oferator type이기 때문에 주소를 참조하여 램에 저장한다
-                    // 값이 바뀌어도 주소는 바뀌지않기 떄문에 같은 배열을 복사하여 다른 변수에 담아서 참조주도록 하자
+                    // 배열은 reference operator type이기 때문에 주소를 참조하여 램에 저장한다
+                    // 값이 바뀌어도 주소는 바뀌지않기 떄문에 같은 배열을 복사하여 다른 변수에 담아서 참조주도록 하자 (다른 주소 참조 깊은 복사)
                     let likePush = [...따봉];
                     likePush[index]++;
                     따봉추가(likePush);
@@ -83,7 +83,6 @@ function App() {
                 className="btn btn-danger "
                 onClick={() => {
                   let copy = [...글제목];
-
                   copy.splice(index, 1);
                   글제목변경(copy);
                 }}
